@@ -1,7 +1,11 @@
+import Profile from '../pages/Profile';
+import Contact from '../pages/Contact';
+import Additional from '../pages/Additional';
+
 export const tabHeadData = [
     {
         id:1,
-        title:"Profile",
+        title:"Personal Info",
     },
     {
         id:2,
@@ -9,21 +13,25 @@ export const tabHeadData = [
     },
     {
         id:3,
-        title:"More Details",
+        title:"Preferences",
     }
 ]
 
 export const tabContainerData = [
     {
         id:1,
-        content:"tab content 01"
+        content:Profile,
+        validaion: () => {
+
+        },
+        error:{}
     },
     {
         id:2,
-        content:"tab content 02"
+        content:Contact
     },
     {
         id:3,
-        content:"tab content 03"
+        content:Additional
     }
 ]

@@ -29,8 +29,8 @@
 .tabContent_container{
     width: 100%;
     position: relative;
-    padding: 10px;
-    height: 200px;
+    padding: 30px 20px;
+    min-height: 200px;
 }
 .tabContent_container_tabs{
   position: absolute;
@@ -68,4 +68,48 @@
   opacity: 0.7;
   color: #000;
 
+}
+
+/* form element styles  */
+.formContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.formGrp{
+  display: flex;
+  flex-direction: column;
+  width: 240px;
+  position: relative;
+  position: relative;
+}
+.formGrp .custLabel{
+  position:absolute;
+  top: 5px;
+  left: 5px;
+  padding: 0 2px;
+  transition: all 0.3s ease;
+  pointer-events: none;
+  background-color: #fff;
+}
+
+.formGrp .formElem:focus +  .custLabel,
+.formGrp .formElem:valid + .custLabel
+{
+  top: -12px;
+  left: 3px;
+  transform: scale(0.8);
+}
+.formGrp input{
+  outline:none;
+}
+.formGrp .formElem{
+  padding: 8px;
+  border: 1px solid #c7c7c7;
+}
+.formGrp-radio{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 4px;
 }
